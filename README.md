@@ -7,7 +7,7 @@ PassFill is a Chrome extension designed for developers and testers to efficientl
 
 ## Features
 - **URL-based storage**: Manage accounts and passwords specific to each URL to avoid confusion.
-- **Autofill**: Automatically fill in passwords with one click.
+- **Autofill**: Automatically fill in with one click.
 - **Encrypted local storage**: Uses Web Crypto API to ensure password security.
 
 ## Screenshots
@@ -17,8 +17,6 @@ PassFill is a Chrome extension designed for developers and testers to efficientl
 
 ### Account List
 ![Account List](screenshot2.png)
-
-
 
 ## Installation
 
