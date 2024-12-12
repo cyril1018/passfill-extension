@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>帳密管理 Account Management</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <button
+        class="tab-button"
+        data-tab="add-account-pane"
+        id="add-account-title"
+      >
+        __MSG_addAccountTitle__
+      </button>
+      <button
+        class="tab-button active"
+        data-tab="account-list-pane"
+        id="account-list-title"
+      >
+        __MSG_accountListTitle__
+      </button>
+    </div>
+
+    <div class="tab-content">
+      <!-- 新增帳號 Tab -->
+      <div id="add-account-pane" class="tab-pane">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="帳號 Username" />
+          <input type="password" id="password" placeholder="密碼 Password" />
+          <input type="text" id="remark" placeholder="備註 Remark" />
+        </div>
+        <button id="save">
+          <i class="fas fa-save"></i> __MSG_saveButton__
+        </button>
+        <p class="info" id="add-account-warning">__MSG_addAccountWarning__</p>
+
+        <p class="warning" id="warning-message">
+          <strong id="warning-title">__MSG_warningTitle__</strong>
+          __MSG_warningMessage__
+        </p>
+      </div>
+
+      <!-- 帳號清單 Tab -->
+      <div id="account-list-pane" class="tab-pane active">
+        <div id="message-container" class="message" style="display: none"></div>
+        <ul id="account-list"></ul>
+        <button id="clear" style="display: none">清除全部 Clear All</button>
+        <button id="refresh">
+          <i class="fas fa-sync-alt"></i> __MSG_refreshButton__
+        </button>
+      </div>
+    </div>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

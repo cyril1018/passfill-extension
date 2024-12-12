@@ -1,0 +1,47 @@
+{
+  "extensionName": {
+    "message": "PassFill"
+  },
+  "extensionDescription": {
+    "message": "測試帳密自動填寫工具。"
+  },
+  "actionTitle": {
+    "message": "點擊開啟"
+  },
+  "addAccountTitle": {
+    "message": "新增帳號"
+  },
+  "accountListTitle": {
+    "message": "帳號清單"
+  },
+  "warningTitle": {
+    "message": "警告："
+  },
+  "warningMessage": {
+    "message": "此工具僅供測試，請勿存放真實帳密。"
+  },
+  "saveButton": {
+    "message": " 儲存"
+  },
+  "refreshButton": {
+    "message": " 重新整理"
+  },
+  "usernamePlaceholder": {
+    "message": "帳號"
+  },
+  "passwordPlaceholder": {
+    "message": "密碼"
+  },
+  "remarkPlaceholder": {
+    "message": "備註"
+  },
+  "clickToFill": {
+    "message": "點擊帶入"
+  },
+  "noData": {
+    "message": "無資料"
+  },
+  "addAccountWarning": {
+    "message": "由於帳密是依據網站連結分別存放，請確保您已位於該網站的登入頁面後再新增帳號。"
+  }
+}

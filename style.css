@@ -1,0 +1,257 @@
+/* 全局樣式 */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* 容器樣式 */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  color: #ff007b;
+  text-shadow: 0 0 10px #ff007b, 0 0 20px #ff007b;
+}
+
+.header p {
+  font-size: 14px;
+  color: #00f5ff;
+}
+
+/* Section 標題 */
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #00f5ff;
+  border-left: 4px solid #00f5ff;
+  padding-left: 10px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 100%; /* 限制子容器寬度 */
+  width: 100%;
+}
+/* Input Group */
+.input-group input {
+  padding: 12px;
+  font-size: 14px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00f5ff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s transform 0.3s;
+  transform: scale(1);
+}
+
+.input-group input:focus {
+  border-color: #ff007b;
+  box-shadow: 0 0 15px #ff007b;
+  transform: scale(1.02);
+  transition: border-color 0.3s, box-shadow 0.3s transform 0.3s;
+}
+
+/* 通用按鈕樣式 */
+button {
+  background: transparent; /* 完全透明背景 */
+  color: #00f5ff; /* 霓虹藍色文字 */
+  font-size: 16px; /* 調整文字大小 */
+  padding: 10px 20px; /* 按鈕內邊距 */
+  border: none; /* 無邊框 */
+  text-transform: uppercase; /* 全大寫字母 */
+  cursor: pointer;
+  text-shadow: 0 0 10px #00f5ff, 0 0 20px rgba(0, 245, 255, 0.8); /* 文字光暈 */
+  transition: transform 0.3s, text-shadow 0.3s; /* 動態效果 */
+}
+
+/* 懸停效果 */
+button:hover {
+  transform: scale(1.1); /* 輕微放大 */
+  text-shadow: 0 0 20px #00f5ff, 0 0 30px rgba(0, 245, 255, 1); /* 增強光暈 */
+}
+
+/* 禁用按鈕 */
+button:disabled {
+  color: #555555; /* 灰色禁用狀態 */
+  text-shadow: none; /* 無光暈 */
+  cursor: not-allowed;
+}
+
+/* 清單容器 */
+#account-list {
+  display: flex;
+  flex-wrap: wrap; /* 允許項目換行 */
+  gap: 10px; /* 項目之間的間距 */
+  padding: 0;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+/* 清單項目 */
+#account-list li {
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: #1e1e1e; /* 項目背景色 */
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 14px; /* 字體較小 */
+  transition: background 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+/* 懸停效果 */
+#account-list li:hover {
+  background: #2c2c2c; /* 懸停時背景稍亮 */
+  transform: scale(1.05); /* 輕微放大 */
+}
+/* 帳號文字 */
+.account-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; /* 防止文字換行 */
+}
+
+/* 懸停時顯示提示文字 */
+#account-list li .account-text::before {
+  content: attr(data-hint); /* 提示文字 */
+  position: absolute;
+  top: 50%; /* 垂直居中 */
+  left: 20px; /* 靠左顯示 */
+  transform: translateY(-50%);
+  background: rgba(0, 245, 255, 0.8); /* 背景色 */
+  color: #000; /* 提示文字顏色 */
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0; /* 預設隱藏 */
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none; /* 防止提示文字影響交互 */
+}
+
+/* 懸停時顯示提示文字 */
+#account-list li .account-text:hover::before {
+  opacity: 1; /* 顯示提示文字 */
+  transform: translateY(-50%) translateX(0); /* 平滑顯示 */
+}
+
+/* 刪除按鈕 */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff6f00;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+  padding: 5px 10px;
+}
+
+.delete-btn:hover {
+  color: #ff8f00;
+  transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #00f5ff;
+}
+
+/* 警告區域 (Warning) */
+.warning {
+  font-size: 14px;
+  color: #ff007b; /* 明顯的粉紅色 */
+  background-color: #222; /* 深灰背景 */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 123, 0.8); /* 更強的光暈效果 */
+}
+
+.warning strong {
+  color: #ff1a8c; /* 更鮮豔的紅色 */
+  text-shadow: 0 0 5px #ff1a8c, 0 0 10px rgba(255, 26, 140, 0.8); /* 強調重要部分 */
+}
+.message {
+  background: rgba(0, 255, 100, 0.1); /* 淡綠色背景 */
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #00ff64; /* 字體霓虹綠 */
+  font-size: 14px;
+  text-align: center; /* 文字居中 */
+  box-shadow: 0 0 10px rgba(0, 255, 100, 0.4), 0 0 20px rgba(0, 255, 100, 0.2); /* 綠色光暈 */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 提示區域 (Info) */
+.info {
+  font-size: 14px;
+  color: #00bcd4; /* 使用柔和的青色，避免過於顯眼 */
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Tabs 區域樣式 */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: transparent;
+  color: rgba(0, 245, 255, 0.6); /* 顏色調暗，降低透明度 */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-shadow: 0 0 5px rgba(0, 245, 255, 0.4); /* 降低光暈強度 */
+  transition: transform 0.3s, text-shadow 0.3s, color 0.3s;
+}
+
+.tab-button.active {
+  color: rgba(0, 245, 255, 1); /* 懸停時恢復亮色 */
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(0, 245, 255, 1), 0 0 30px rgba(0, 245, 255, 0.8);
+}
+
+.tab-button:not(.active):hover {
+  color: rgba(0, 245, 255, 1); /* 懸停時恢復亮色 */
+  transform: scale(1.1);
+  text-shadow: 0 0 20px rgba(0, 245, 255, 1), 0 0 30px rgba(0, 245, 255, 0.8);
+}
+
+/* Tab 內容樣式 */
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: flex; /* 啟用 Flexbox */
+  flex-direction: column; /* 按列排列內容 */
+  align-items: center; /* 水平置中 */
+  justify-content: center; /* 垂直置中 */
+  height: 100%; /* 確保容器占滿空間 */
+}

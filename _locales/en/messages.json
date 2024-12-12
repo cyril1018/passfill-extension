@@ -1,0 +1,47 @@
+{
+  "extensionName": {
+    "message": "Passfill"
+  },
+  "extensionDescription": {
+    "message": "Manage and autofill test accounts and passwords"
+  },
+  "actionTitle": {
+    "message": "Click to open autofill panel"
+  },
+  "addAccountTitle": {
+    "message": "Add Account"
+  },
+  "accountListTitle": {
+    "message": "Account List"
+  },
+  "warningTitle": {
+    "message": "Warning:"
+  },
+  "warningMessage": {
+    "message": "This tool is for testing purposes only. Do not store real account or password information."
+  },
+  "saveButton": {
+    "message": " Save"
+  },
+  "refreshButton": {
+    "message": " Refresh"
+  },
+  "usernamePlaceholder": {
+    "message": "Username"
+  },
+  "passwordPlaceholder": {
+    "message": "Password"
+  },
+  "remarkPlaceholder": {
+    "message": "Remark"
+  },
+  "clickToFill": {
+    "message": "Click To Fill"
+  },
+  "noData": {
+    "message": "NO DATA"
+  },
+  "addAccountWarning": {
+    "message": "Since accounts and passwords are stored separately based on website URLs, please make sure you are on the login page of the website before adding an account."
+  }
+}
