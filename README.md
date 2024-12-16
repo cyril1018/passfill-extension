@@ -13,10 +13,10 @@ PassFill is a Chrome extension designed for developers and testers to efficientl
 ## Screenshots
 
 ### Add Account Interface
-![Add Account](screenshot1.png)
+![Add Account](images/screenshot1.png)
 
 ### Account List
-![Account List](screenshot2.png)
+![Account List](images/screenshot2.png)
 
 ## Installation
 
